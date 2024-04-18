@@ -20,9 +20,9 @@ header {
 
 #gallery img {
     margin: 10px;
-    width: calc(100% / 3 - 20px); /* three images per row */
-    height: 200px;
-    object-fit: cover;
+    max-width: 100%; /* Ensures images are not stretched beyond their natural width */
+    height: auto; /* Maintains the aspect ratio of the images */
+    object-fit: contain; /* Ensures the images are scaled properly within their boxes */
 }
 
 footer {
@@ -34,6 +34,6 @@ footer {
 
 @media (max-width: 600px) {
     #gallery img {
-        width: calc(100% - 20px); /* full width on small screens */
+        width: 100%; /* Allows images to take full width on smaller screens */
     }
 }
